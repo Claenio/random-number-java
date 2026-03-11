@@ -1,82 +1,74 @@
 import java.util.Random;
 
-public class NumeroAleatorio{
+public class NumeroAleatorio {
     Random gerador = new Random();
     private int limite;
     private int numero;
     private int resposta;
     private int tentativas;
     private int contador = 0;
-    
-    public int mostrarNumero(){
+
+    public int mostrarNumero() {
         return numero;
     }
-    
-    public void setLimite(int limite){
+
+    public void setLimite(int limite) {
         this.limite = limite;
+        this.contador = 0;
         if (limite <= 0) {
             this.numero = gerador.nextInt(100);
-            System.out.println("Valor inválido!!! Limite definido para: 100");
+            System.out.println("Valor inválido!!! Limite definido para: 100!");
         } else {
             this.numero = gerador.nextInt(limite + 1);
         }
-        
+
     }
-    
-    public void setTentativas(int tentativas){
-        if (tentativas <= 0){
+
+    public void setTentativas(int tentativas) {
+        if (tentativas <= 0) {
             this.tentativas = 1;
-            System.out.println("Número inválido!!! Quantidade de tentativas definido para: 1");
+            System.out.println("Número inválido!!! Quantidade de tentativas definido para: 1.");
         } else {
             this.tentativas = tentativas;
         }
     }
-    public int getTentativas(){
+
+    public int getTentativas() {
         return tentativas;
     }
-    public int getContador(){
+
+    public int getContador() {
         return contador;
     }
-    
-    public void validarResposta(int resposta){
-        if (resposta < numero && resposta >= 0) {
-            tentativas--;
-            contador++;
-            System.out.println("O número aleatório é maior que: " + resposta);
-            System.out.println("Tentativas restantes: " + tentativas + "\n");
-            if (tentativas == 0){
-                System.out.println("Que pena! Você atingiu o limite de tentativas, o número era: " + numero);
-                contador = 0;
-            }
-        } else if (resposta > numero) {
-            tentativas--;
-            contador++;
-            System.out.println("O número aleatório é menor que: " + resposta);
-            System.out.println("Tentativas restantes: " + tentativas + "\n");
-            if (tentativas == 0){
-                System.out.println("Que pena! Você atingiu o limite de tentativas, o número era: " + numero);
-                contador = 0;
-            }
-        } else if (resposta < 0){
-            tentativas--;
-            contador++;
-            System.out.println("Valor inválido!");
-            System.out.println("Tentativas restantes: " + tentativas + "\n");
-            if (tentativas == 0){
-                System.out.println("Que pena! Você atingiu o limite de tentativas, o número era: " + numero);
-                contador = 0;
-            }
-        } else {
-            contador++;
+
+    public void validarResposta(int resposta) {
+
+        contador++;
+        if (resposta == numero) {
             if (contador == 1) {
-            System.out.println("Parabéns! Você acertou número aleatório: " + resposta + " com " + contador + " tentativa" + "\n");
+                System.out.println("Parabéns! Acertou com " + contador + " tentativa." + "\n");
             } else {
-            System.out.println("Parabéns! Você acertou número aleatório: " + resposta + " com " + contador + " tentativas" + "\n");
+                System.out.println("Parabéns! Acertou com " + contador + " tentativas." + "\n");
             }
             tentativas = 0;
-            contador = 0;
+            return;
         }
+
+        tentativas--;
+        if (resposta < 0) {
+            System.out.println("Valor inválido!");
+        } else if (resposta < numero) {
+            System.out.println("O número é maior que " + resposta + ".");
+        } else {
+            System.out.println("O número é menor que " + resposta + ".");
+        }
+
+        System.out.println("Tentativas restantes: " + tentativas + "." + "\n");
+
+        if (tentativas == 0) {
+            System.out.println("Você errou! O número era: " + numero + ".");
+        }
+
     }
-    
+
 }
-    
