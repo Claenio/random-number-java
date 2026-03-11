@@ -14,7 +14,7 @@ public class NumeroAleatorio {
             this.numero = gerador.nextInt(100);
             System.out.println("Valor inválido!!! Limite definido para: 100!");
         } else {
-            this.numero = gerador.nextInt(limite + 1);
+            this.numero = gerador.nextInt(limite) + 1;
         }
 
     }
@@ -30,10 +30,6 @@ public class NumeroAleatorio {
 
     public int getTentativas() {
         return tentativas;
-    }
-
-    public int getContador() {
-        return contador;
     }
 
     public void validarResposta(int resposta) {
