@@ -4,13 +4,8 @@ public class NumeroAleatorio {
     Random gerador = new Random();
     private int limite;
     private int numero;
-    private int resposta;
     private int tentativas;
     private int contador = 0;
-
-    public int mostrarNumero() {
-        return numero;
-    }
 
     public void setLimite(int limite) {
         this.limite = limite;
