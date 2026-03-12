@@ -30,6 +30,5 @@ O programa exibe um menu que permite iniciar uma nova partida ou encerrar a apli
 ## Screenshots
 
 ![App Screenshot](images/Screenshot1.png)
-![App Screenshot](images/Screenshot2.png>
-)
+![App Screenshot](images/Sreenshot2.png)
 
