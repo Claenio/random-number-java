@@ -1,5 +1,5 @@
 # Jogo do número aleatório Java
-[Java](https://img.shields.io/badge/Java-000?style=for-the-badge&logo=java)
+![Java](https://img.shields.io/badge/Java-000?style=for-the-badge&logo=java)
 
 Olá, seja bem vindo ao meu projeto Jogo do número aleatório.
 Trata-se de um exercício para prática de Java, para por em prática e compartilhar meus aprendizados.
