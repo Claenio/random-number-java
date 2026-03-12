@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.ArrayList;
 
 public class NumeroAleatorio {
     Random gerador = new Random();
@@ -6,10 +7,20 @@ public class NumeroAleatorio {
     private int numero;
     private int tentativas;
     private int contador = 0;
+    private boolean ganhou = false;
+
+    public int getContador() {
+        return contador;
+    }
+    public boolean getGanhou() {
+        return this.ganhou;
+
+    }
 
     public void setLimite(int limite) {
         this.limite = limite;
         this.contador = 0;
+        this.ganhou = false;
         if (limite <= 0) {
             this.numero = gerador.nextInt(100);
             System.out.println("Valor inválido!!! Limite definido para: 100!");
@@ -36,6 +47,7 @@ public class NumeroAleatorio {
 
         contador++;
         if (resposta == numero) {
+            this.ganhou = true;
             if (contador == 1) {
                 System.out.println("Parabéns! Acertou com " + contador + " tentativa." + "\n");
             } else {
