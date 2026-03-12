@@ -29,6 +29,8 @@ O programa exibe um menu que permite iniciar uma nova partida ou encerrar a apli
 
 ## Screenshots
 
-![App Screenshot]()
-![App Screenshot]()
+![App Screenshot](<img width="323" height="531" alt="Captura de tela 2026-03-11 211749" src="https://github.com/user-attachments/assets/83e2fcc6-6842-4a23-886a-8d4fbbc67887" />
+)
+![App Screenshot](<img width="699" height="534" alt="Captura de tela 2026-03-11 211706" src="https://github.com/user-attachments/assets/e9a03957-cdf9-49e6-b140-a60d799c3809" />
+)
 
